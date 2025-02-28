@@ -1,2 +1,24 @@
 Get-ChildItem -Path . -Filter __pycache__ -Recurse | ForEach-Object { git rm -r --cached $_.FullName }
 dict(self.env[model]._fields[field].selection).get(field_value)
+
+systemctl list-units --type=service | grep odoo     //Know Service Name
+sudo reboot                                         //RESTART SYSTEM
+systemctl restart odoo-server                       //RESTART
+grep -r "sale.report" /opt/addons/innovatecsa       //Find 
+
+
+ODOO SSH
+python3 /opt/odoo/odoo-server/odoo-bin shell -d PRONUT_PRO -c /etc/odoo-server.conf --addons-path=/opt/addons/community
+SSH remove module
+self.env['ir.module.module'].search([('name', '=', 'om_account_asset')]).button_immediate_uninstall()
+
+Odoo
+python3 /odoo/odoo-server/odoo-bin shell -d PROSERVANDA -c /etc/odoo-server.conf
+python3 /odoo/odoo-server/odoo-bin -c /etc/odoo-server.conf --db_name=PROSERVANDA --db_user=odoo --db_password=tu_contraseña
+
+POSTGRES
+sudo -u postgres psql PRONUT_PRO
+SELECT name, state FROM ir_module_module WHERE name = 'om_account_asset';
+UPDATE ir_module_module SET state = 'to remove' WHERE name = 'om_account_asset';
+installed
+\q
