@@ -1,0 +1,14 @@
+#!/bin/sh
+
+protected_branches="main dev"
+
+branch=$(git symbolic-ref --short HEAD)
+
+for protected_branch in $protected_branches; do
+  if [ "$branch" = "$protected_branch" ]; then
+    echo "Direct commits are not allowed in the '$branch' branch. Use a merge."
+    exit 1  
+  fi
+done
+
+exit 0
