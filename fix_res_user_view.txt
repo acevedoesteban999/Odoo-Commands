@@ -1,0 +1,7 @@
+Create a 'Scheduled Actions' with model 'res.groups' (Access Groups) and write:
+
+model._update_user_groups_view()
+
+Run manualy and problem was fix
+
+REF: https://www.odoo.com/es_ES/forum/ayuda-1/odoo-15-user-form-renders-groups-id-list-instead-of-group-settings-227761

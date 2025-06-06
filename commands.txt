@@ -22,3 +22,4 @@ SELECT name, state FROM ir_module_module WHERE name = 'om_account_asset';
 UPDATE ir_module_module SET state = 'to remove' WHERE name = 'om_account_asset';
 installed
 \q
+
